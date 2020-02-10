@@ -1,0 +1,14 @@
+{
+    "headline": "Austin Joseph",
+    "sub-headline": "Full Stack Developer",
+    "mission": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium incidunt perferendis earum illo inventore excepturi nulla doloremque? Expedita, quod officiis harum provident temporibus facere voluptates, tenetur similique quaerat voluptatibus dolorum.",
+    "profile-img": "profile-small.png",
+    "education": {
+        "title": "Education",
+        "desc": "Stony Brook University, Stony Brook, NY Expected May 2020 Bachelor of Science in Computer Science"
+    },
+    "tiles": [{
+        "title": "title",
+        "desc": "desc"
+    }]
+}

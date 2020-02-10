@@ -1,0 +1,166 @@
+@import "./../Theme.scss";
+.line {
+    border: .1vh solid;
+}
+
+#level0 {
+    width: 75%;
+    margin: auto;
+}
+
+#title-bar {
+    text-align: center;
+    @media screen and (max-width: $break-xsmall) {
+        font-size: 7vw;
+    }
+    @media screen and (min-width: $break-xsmall) {
+        font-size: 5vw;
+    }
+    @media screen and (min-width: $break-large) {
+        font-size: 3vw;
+    }
+    // @media screen and (max-width: $break-small) {
+    //     font-size: 50px;
+    // }
+    // @media screen and (min-width: $break-small) and (max-width: $break-medium) {
+    //     font-size: 80px;
+    // }
+    // @media screen and (min-width: $break-medium) {
+    //     font-size: 80px;
+    // }
+}
+
+#skills {
+    text-align: center;
+    font-size: 7vw;
+    border: 22px;
+}
+
+.cards-center {
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+
+// #headline {
+//     margin: auto;
+// }
+#sub-headline {
+    text-align: center;
+    border-top: 2px solid;
+    width: 75%;
+    margin: auto;
+    @media screen and (max-width: $break-xsmall) {
+        font-size: 60%;
+    }
+    @media screen and (min-width: $break-xsmall) {
+        font-size: 90%;
+    }
+    @media screen and (min-width: $break-small) {
+        font-size: 60%;
+    }
+    @media screen and (min-width: $break-medium) {
+        font-size: 60%;
+    }
+}
+
+#profile-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    @media screen and (max-width: $break-small) {
+        width: 170px;
+        height: 170px;
+    }
+    @media screen and (min-width: $break-small) {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+#mission-description {
+    @media screen and (max-width: $break-xsmall) and (orientation: portrait) {
+        font-size: 4vw;
+    }
+    @media screen and (min-width: $break-xsmall) and (orientation: portrait) {
+        font-size: 2vw;
+    }
+    @media screen and (max-width: $break-xsmall) and (orientation: landscape) {
+        font-size: 1vw;
+    }
+    @media screen and (min-width: $break-xsmall) and (orientation: landscape) {
+        font-size: 2vw;
+    }
+}
+
+#contact {
+    border: 2px solid;
+    margin-bottom: 5px;
+    @media screen and (max-width: $break-small) {
+        font-size: 15px;
+        text-align: center;
+    }
+    @media screen and (min-width: $break-medium) {
+        font-size: 25px;
+    }
+}
+
+#education-title {
+    @media screen and (max-width: $break-small) {
+        font-size: 30px;
+    }
+    @media screen and (min-width: $break-medium) {
+        font-size: 30px;
+    }
+}
+
+#education-description {
+    @media screen and (max-width: $break-xsmall) and (orientation: portrait) {
+        font-size: 4vw;
+    }
+    @media screen and (min-width: $break-xsmall) and (orientation: portrait) {
+        font-size: 2vw;
+    }
+    @media screen and (max-width: $break-xsmall) and (orientation: landscape) {
+        font-size: 1vw;
+    }
+    @media screen and (min-width: $break-xsmall) and (orientation: landscape) {
+        font-size: 2vw;
+    }
+}
+
+#course-title {
+    @media screen and (max-width: $break-small) {
+        font-size: 30px;
+    }
+    @media screen and (min-width: $break-medium) {
+        font-size: 30px;
+    }
+}
+
+#course-description {
+    @media screen and (max-width: $break-xsmall) and (orientation: portrait) {
+        font-size: 4vw;
+    }
+    @media screen and (min-width: $break-xsmall) and (orientation: portrait) {
+        font-size: 2vw;
+    }
+    @media screen and (max-width: $break-xsmall) and (orientation: landscape) {
+        font-size: 1vw;
+    }
+    @media screen and (min-width: $break-xsmall) and (orientation: landscape) {
+        font-size: 2vw;
+    }
+}
+
+// #bottom-half {
+// width: 100%;
+// padding-left: 0;
+// padding-right: 0;
+// margin-left: 0;
+// margin-right: 0;
+// }
+// #hardpart {
+//     font-size: 3vw;
+// }

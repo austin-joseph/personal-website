@@ -1,0 +1,53 @@
+/*This file is supposed to contain global styling so we 
+can change the color of parts of our website easily 
+without having to naviage a dozen different files. 
+I have put in some palceholder colors right now but
+we can change the colors to suit our needs easily */
+
+$primary-background-color: white;
+$primary-text-color:#2E4158;
+$secondary-background-color:red;
+$secondary-text-color: #2E4158;
+$tertiary-background-color: #abc6ea;
+$break-xsmall: 576px;
+$break-small: 768px;
+$break-medium: 992px;
+$break-large: 1200px;
+.theme-primary-color {
+    background-color: $primary-background-color;
+}
+
+.theme-primary-text-color {
+    color: $primary-text-color
+}
+
+.theme-secondary-color {
+    background-color: $secondary-background-color;
+}
+
+body {
+    background-color: $primary-background-color;
+    color: $primary-text-color;
+    font-size: 1vw;
+}
+
+.center {
+    text-align: center;
+    position: relative;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.textLeft {
+    text-align: left;
+}
+
+.textRight {
+    text-align: right;
+}
+
+.textCenter {
+    text-align: center;
+}
