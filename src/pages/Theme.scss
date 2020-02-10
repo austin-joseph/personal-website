@@ -51,3 +51,21 @@ body {
 .textCenter {
     text-align: center;
 }
+
+.textLeftUnlessSmall {
+    @media screen and (max-width: $break-xsmall) {
+        text-align: center;
+    }
+    @media screen and (min-width: $break-xsmall) {
+        text-align: left;
+    }
+}
+
+.textRightUnlessSmall {
+    @media screen and (max-width: $break-xsmall) {
+        text-align: center;
+    }
+    @media screen and (min-width: $break-xsmall) {
+        text-align: right;
+    }
+}

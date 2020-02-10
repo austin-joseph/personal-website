@@ -41,7 +41,7 @@ export default class Home extends Component {
 					</Row>
 					<Row>
 						<Col xs={12} md={6} >
-							<div id={"textLeft"}>
+							<div class={"textLeftUnlessSmall"}>
 								<div id={"education-title"}>
 									Education
 								</div>
@@ -52,9 +52,9 @@ export default class Home extends Component {
 								</div>
 							</div>
 						</Col>
-						
+
 						<Col xs={12} md={6} >
-							<div id={"textRight"}>
+							<div class={"textRightUnlessSmall"}>
 								<div id={"course-title"}>
 									Course Work
 									</div>
@@ -63,7 +63,7 @@ export default class Home extends Component {
 									Computer Security<br />
 									Software Developement<br />
 									Computer Networks<br />
-									Princles of Database Systems<br />
+									Principles of Database Systems<br />
 								</div>
 							</div>
 						</Col>
@@ -78,77 +78,24 @@ export default class Home extends Component {
 							</div>
 							<div class={"cards-center"}>
 								<Row>
-									<Col xs={6} sm={4} md={3}>
-										<Card>
-											<Card.Body>
-												<Card.Title>Programming</Card.Title>
-												<Card.Subtitle>
-													Java<br />
-													Python<br />
-													Javascript<br />
-													HTML5/CSS3<br />
-													Spring Boot/MVC<br />
-												</Card.Subtitle>
-											</Card.Body>
-										</Card>
-									</Col>
-									<Col xs={6} sm={4} md={3}>
-										<Card>
-											<Card.Body>
-												<Card.Title>Team Integration Tools</Card.Title>
-												<Card.Subtitle>
-													Github<br />
-													Bitbucket<br />
-													Trello<br />
-												</Card.Subtitle>
-											</Card.Body>
-										</Card>
-									</Col>
-									<Col xs={6} sm={4} md={3}>
-										<Card>
-											<Card.Body>
-												<Card.Title>Database Managment</Card.Title>
-												<Card.Subtitle>
-													MySQL<br />
-													MySQL Workbench<br />
-													MongoDB<br />
-													MongoDB Compass<br />
-												</Card.Subtitle>
-											</Card.Body>
-										</Card>
-									</Col>
-									<Col xs={6} sm={4} md={3}>
-										<Card>
-											<Card.Body>
-												<Card.Title>Application Deployment</Card.Title>
-												<Card.Subtitle>
-													AWS Elastic Beanstalk<br />
-													Google Cloud App Engine<br />
-													Docker<br />
-													MongoDB Atlas<br />
-												</Card.Subtitle>
-											</Card.Body>
-										</Card>
-									</Col>
-									{resumeJson["tiles"].map((item, index) => {
-										return (<Col xs={4}>
-											{/* <div class={"nametag"}>
-										<div >
-											{item["title"]}
-										</div>
-										<div>
-											{item["desc"]}
-										</div>
-									</div> */}
-											{/* <Card>
-										<Card.Body>
-											<Card.Title>{item["title"]}</Card.Title>
-											<Card.Text>
-												{item["desc"]}
-											</Card.Text>
-										</Card.Body>
-									</Card> */}
-										</Col>)
+									{resumeJson["skills"].map((item) => {
+										return (
+
+											<Col xs={6} sm={4} md={3}>
+												<Card>
+													<Card.Body>
+														<Card.Title>{item["title"]}</Card.Title>
+														<Card.Subtitle>
+															{
+																item["desc"].map((subitem) => {
+																	return (<div>{subitem} <br /></div>);
+																})
+															}
+														</Card.Subtitle>
+													</Card.Body>
+												</Card>
+											</Col>
+										)
 									})}
 								</Row>
 							</div>
@@ -160,42 +107,24 @@ export default class Home extends Component {
 							</div>
 							<div class={"cards-center"}>
 								<Row >
-									<Col xs={12} lg={3}>
-										<Card>
-											<Card.Body>
-												<Card.Title>Raising The Bar</Card.Title>
-												<Card.Subtitle>
-													Led a team of 4 students in designing, coding and deploying a web based bartender training application.<br />
-													Utilized ReactJs,  React-Bootstrap and other React modules to create a bartop interface in which a user can create and learn about a variety.<br />
-													Utilized Spring Boot MVC and MongoDB to control user accounts, user data, as well as drink recipes and metadata to allow for easy access by the front end application.<br />
-													Deployed the application to AWS Elastic Beanstalk as well as MongoDB Atlas<br />
-													Created a unified development environment for all team members by utilizing a VirtualBox virtual machine running Linux Mint Cinnamon as well as Docker containers to ensure consistent SDK versions and a consistent build system.<br />
-												</Card.Subtitle>
-											</Card.Body>
-										</Card>
-									</Col>
-
-									<Col xs={12} lg={3}>
-										<Card>
-											<Card.Body>
-												<Card.Title>Raising The Bar</Card.Title>
-												<Card.Subtitle>
-													Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, voluptate? Dolor nostrum odio libero ab, doloribus nam iure nihil, soluta beatae deserunt quasi consequuntur vero quas quae qui et voluptate!
-									</Card.Subtitle>
-											</Card.Body>
-										</Card>
-									</Col>
-
-									<Col xs={12} lg={3}>
-										<Card>
-											<Card.Body>
-												<Card.Title>Raising The Bar</Card.Title>
-												<Card.Subtitle>
-													Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, voluptate? Dolor nostrum odio libero ab, doloribus nam iure nihil, soluta beatae deserunt quasi consequuntur vero quas quae qui et voluptate!
-									</Card.Subtitle>
-											</Card.Body>
-										</Card>
-									</Col>
+									{resumeJson["projects"].map((item) => {
+										return (
+											<Col xs={6} sm={4} md={3}>
+												<Card>
+													<Card.Body>
+														<Card.Title>{item["title"]}</Card.Title>
+														<Card.Subtitle>
+															{
+																item["desc"].map((subitem) => {
+																	return (<div>{subitem} <br /></div>);
+																})
+															}
+														</Card.Subtitle>
+													</Card.Body>
+												</Card>
+											</Col>
+										)
+									})}
 								</Row>
 							</div>
 						</Col>

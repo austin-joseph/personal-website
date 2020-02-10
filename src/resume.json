@@ -5,10 +5,39 @@
     "profile-img": "profile-small.png",
     "education": {
         "title": "Education",
-        "desc": "Stony Brook University, Stony Brook, NY Expected May 2020 Bachelor of Science in Computer Science"
+        "desc": ["Stony Brook University, Stony Brook, NY", "Expected May 2020", "Bachelors of Science in Computer Science"]
     },
-    "tiles": [{
-        "title": "title",
-        "desc": "desc"
+    "courses": {
+        "title": "Course Work",
+        "desc": ["Stony Brook University, Stony Brook, NY", "Expected May 2020", "Bachelors of Science in Computer Science"]
+    },
+    "skills": [{
+            "title": "Website Development",
+            "desc": ["React", "Bootstrap", "Sass", "Yarn", "NPM"]
+        },
+        {
+            "title": "Programming",
+            "desc": ["Java", "Python", "Javacript", "HTML", "CSS/SCSS"]
+        },
+        {
+            "title": "Application Frameworks",
+            "desc": ["Spring Boot/MVC", "Flask"]
+        },
+        {
+            "title": "Database Managment",
+            "desc": ["MySQL", "MongoDB"]
+        },
+        {
+            "title": "Application Deployment",
+            "desc": ["AWS Elastic Beanstalk", "Google Cloud App Engine", "Docker", "MongoDB Atlas"]
+        },
+        {
+            "title": "Team Integration",
+            "desc": ["Github", "Trello", "Bitbucket", "Slask", "Google Hangouts"]
+        }
+    ],
+    "projects": [{
+        "title": "Raising The Bar",
+        "desc": ["React", "Bootstrap", "Sass", "Yarn", "NPM"]
     }]
 }
