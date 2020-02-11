@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Card } from 'react-bootstrap';
+import { Row, Col, Card, Button } from 'react-bootstrap';
 import './Home.scss';
 import NavigationBar from './../navbar/NavigationBar.jsx';
 import resumeJson from './../../resume.json';
@@ -32,7 +32,7 @@ export default class Home extends Component {
 					</Row>
 					<Row >
 						<Col xs={12} >
-							<div class={"textCenter"}>
+							<div className={"textCenter"}>
 								<div id={"mission-description"}>
 									{resumeJson["mission"]}
 								</div>
@@ -41,46 +41,47 @@ export default class Home extends Component {
 					</Row>
 					<Row>
 						<Col xs={12} md={6} >
-							<div class={"textLeftUnlessSmall"}>
+							<div className={"textLeftUnlessSmall"}>
 								<div id={"education-title"}>
 									Education
 								</div>
 								<div id={"education-description"}>
-									<span class={"bold"}>Stony Brook University</span>, Stony Brook, NY<br />
-									Expected May 2020<br />
-									Bachelor of Science in Computer Science
+									{
+										resumeJson["education"].map((item) => {
+											return (<div>{item} <br /></div>);
+										})
+									}
 								</div>
 							</div>
 						</Col>
 
 						<Col xs={12} md={6} >
-							<div class={"textRightUnlessSmall"}>
+							<div className={"textRightUnlessSmall"}>
 								<div id={"course-title"}>
 									Course Work
 									</div>
 								<div id={"course-description"}>
-									Machine Learning<br />
-									Computer Security<br />
-									Software Developement<br />
-									Computer Networks<br />
-									Principles of Database Systems<br />
+									{
+										resumeJson["courses"].map((item) => {
+											return (<div>{item} <br /></div>);
+										})
+									}
 								</div>
 							</div>
 						</Col>
 					</Row>
 				</div>
-				<div class={"line"} />
-				<div id={"level1"} class={"center"}>
+				<div className={"line"} />
+				<div id={"level1"} className={"center"}>
 					<Row >
-						<Col xs={12} xl={3}>
-							<div id={"skills"} class={"center"}>
+						<Col xs={12} xl={6}>
+							<div id={"skills"} className={"center"}>
 								Skills
 							</div>
-							<div class={"cards-center"}>
+							<div className={"cards-center"}>
 								<Row>
 									{resumeJson["skills"].map((item) => {
 										return (
-
 											<Col xs={6} sm={4} md={3}>
 												<Card>
 													<Card.Body>
@@ -100,16 +101,15 @@ export default class Home extends Component {
 								</Row>
 							</div>
 						</Col>
-
-						<Col xs={12} xl={9}>
+						<Col xs={12} xl={6}>
 							<div id={"skills"}>
 								Projects
 							</div>
-							<div class={"cards-center"}>
+							<div className={"cards-center"}>
 								<Row >
 									{resumeJson["projects"].map((item) => {
 										return (
-											<Col xs={6} sm={4} md={3}>
+											<Col xs={12} sm={6}>
 												<Card>
 													<Card.Body>
 														<Card.Title>{item["title"]}</Card.Title>
@@ -119,6 +119,11 @@ export default class Home extends Component {
 																	return (<div>{subitem} <br /></div>);
 																})
 															}
+															<a href={item["details"]} >
+																<Button >
+																	Details
+																</Button>
+															</a>
 														</Card.Subtitle>
 													</Card.Body>
 												</Card>
@@ -130,10 +135,7 @@ export default class Home extends Component {
 						</Col>
 					</Row>
 				</div>
-				<div class={"line"} />
-
-				{/* <Container>
-				</Container> */}
+				<div className={"line"} />
 			</React.Fragment>
 		);
 	}

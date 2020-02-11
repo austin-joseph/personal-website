@@ -1,16 +1,10 @@
 {
     "headline": "Austin Joseph",
     "sub-headline": "Full Stack Developer",
-    "mission": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium incidunt perferendis earum illo inventore excepturi nulla doloremque? Expedita, quod officiis harum provident temporibus facere voluptates, tenetur similique quaerat voluptatibus dolorum.",
+    "mission": "",
     "profile-img": "profile-small.png",
-    "education": {
-        "title": "Education",
-        "desc": ["Stony Brook University, Stony Brook, NY", "Expected May 2020", "Bachelors of Science in Computer Science"]
-    },
-    "courses": {
-        "title": "Course Work",
-        "desc": ["Stony Brook University, Stony Brook, NY", "Expected May 2020", "Bachelors of Science in Computer Science"]
-    },
+    "education": ["Stony Brook University, Stony Brook, NY", "Expected May 2020", "Bachelors of Science in Computer Science"],
+    "courses": ["Machine Learning", "Computer Security", "Software Development", "Computer Networks", "Principles of Database Systems"],
     "skills": [{
             "title": "Website Development",
             "desc": ["React", "Bootstrap", "Sass", "Yarn", "NPM"]
@@ -38,6 +32,21 @@
     ],
     "projects": [{
         "title": "Raising The Bar",
-        "desc": ["React", "Bootstrap", "Sass", "Yarn", "NPM"]
+        "desc": ["A website built to allow bar owners to test the skills of a bartender before they're hired"],
+        "github": "https://github.com/austin-joseph/RaisingTheBar",
+        "details": "/raising-the-bar",
+        "deployment": "/raising-the-bar/deployed"
+    }, {
+        "title": "Stratego Online",
+        "desc": ["An online interface to play stratigo against an ai opponent and track your results"],
+        "github": "https://github.com/austin-joseph/stratigoonline",
+        "details": "/stratigoonline",
+        "deployment": "/stratigoonline/deployed"
+    }, {
+        "title": "Reddit Query",
+        "desc": ["Reddit Query is made of three parts a web scraper, data analysis and data visualizing tool made by Austin Joseph. The application utilizes PRAW (Python Reddit API Wrapper) to create a catalog of the top 1000 posts on all.reddit.com for the last 24 hours. A summary is then avaliable on a genearated webpage."],
+        "github": "https://github.com/austin-joseph/RaisingTheBar",
+        "details": "/raising-the-bar",
+        "deployment": "/raising-the-bar/deployed"
     }]
 }
