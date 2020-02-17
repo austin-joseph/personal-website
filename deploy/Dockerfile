@@ -1,3 +1,4 @@
-FROM httpd:2.4
-COPY ./static/ /usr/local/apache2/htdocs/
-RUN chmod -R +x /usr/local/apache2/htdocs/static/
+FROM httpd:2.4.41
+COPY ./my-httpd.conf /usr/local/apache2/conf/httpd.conf
+COPY ./certs /usr/local/apache2/conf/
+COPY ./root-html/ /usr/local/apache2/htdocs/
