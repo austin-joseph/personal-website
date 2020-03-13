@@ -4,11 +4,12 @@ without having to naviage a dozen different files.
 I have put in some palceholder colors right now but
 we can change the colors to suit our needs easily */
 
-$primary-background-color: white;
-$primary-text-color:#2E4158;
-$secondary-background-color:red;
-$secondary-text-color: #2E4158;
-$tertiary-background-color: #abc6ea;
+$primary-background-color: rgb(32, 152, 209);
+$primary-text-color:white;
+$secondary-background-color:#2E4158;
+$secondary-text-color: white;
+$tertiary-background-color: #0448a1;
+$tertiary-text-color: white;
 $break-xsmall: 576px;
 $break-small: 768px;
 $break-medium: 992px;
@@ -25,12 +26,11 @@ $break-large: 1200px;
     background-color: $secondary-background-color;
 }
 
-body {
-    background-color: $primary-background-color;
-    color: $primary-text-color;
-    font-size: 1vw;
-}
-
+// body {
+//     background-color: $primary-background-color;
+//     color: $primary-text-color;
+//     font-size: 1vw;
+// }
 .center {
     text-align: center;
     position: relative;

@@ -1,154 +1,90 @@
 @import "./../Theme.scss";
-.line {
-    border: .1vh solid;
+body {
+    font-size: 100%;
+    background-color: $primary-background-color;
+    color: $primary-text-color;
 }
 
-#level0 {
-    width: 75%;
+#introduction {
     margin: auto;
-}
-
-#title-bar {
     text-align: center;
-    @media screen and (max-width: $break-xsmall) {
-        font-size: 7vw;
+    width: 90%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    @media only screen and (min-width: $break-large) {
+        font-size: 200%;
     }
-    @media screen and (min-width: $break-xsmall) {
-        font-size: 5vw;
+    @media only screen and (max-width: $break-large) {
+        font-size: 300%;
     }
-    @media screen and (min-width: $break-large) {
-        font-size: 3vw;
+    @media only screen and (max-width: $break-medium) {
+        font-size: 500%;
+    }
+    .title {
+        font-size: 200%;
+    }
+    .subtitle {
+        // font-size: smaller;
+        // font-weight: bold;
+        margin-bottom: 1em;
+    }
+    #button-holder {
+        margin: auto;
+        width: 60%;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        @media only screen and (min-width: $break-medium) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media only screen and (max-width: $break-medium) {
+            grid-template-columns: 1fr;
+        }
+        a {
+            color: inherit;
+            padding: 2vw;
+        }
     }
 }
 
-#skills {
-    text-align: center;
-    font-size: 7vw;
-    border: 22px;
-}
-
-.cards-center {
+#about-me {
+    width: 100%;
     margin: auto;
-    position: relative;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 2fr 4fr .5fr;
+    justify-items: center;
+    align-items: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background-color: $secondary-background-color;
+    color: $secondary-text-color;
+    @media only screen and (min-width: $break-large) {
+        font-size: 150%;
+    }
+    @media only screen and (max-width: $break-large) {
+        font-size: 200%;
+    }
+    img {
+        border-radius: 50%;
+    }
 }
 
-#sub-headline {
-    text-align: center;
-    border-top: 2px solid;
-    width: 75%;
+#portfolio {
     margin: auto;
-    @media screen and (max-width: $break-xsmall) {
-        font-size: 60%;
+    text-align: center;
+    background-color: $tertiary-background-color;
+    color: $tertiary-text-color;
+    display: flex;
+    justify-content: center;
+    @media only screen and (min-width: $break-large) {
+        font-size: 150%;
     }
-    @media screen and (min-width: $break-xsmall) {
-        font-size: 90%;
+    @media only screen and (max-width: $break-large) {
+        font-size: 500%;
     }
-    @media screen and (min-width: $break-small) {
-        font-size: 60%;
-    }
-    @media screen and (min-width: $break-medium) {
-        font-size: 60%;
-    }
-}
-
-#profile-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-    @media screen and (max-width: $break-small) {
-        width: 170px;
-        height: 170px;
-    }
-    @media screen and (min-width: $break-small) {
-        width: 200px;
-        height: 200px;
+    .element {
+        .title {
+            font-size: 200%;
+        }
     }
 }
-
-#mission-description {
-    @media screen and (max-width: $break-xsmall) and (orientation: portrait) {
-        font-size: 4vw;
-    }
-    @media screen and (min-width: $break-xsmall) and (orientation: portrait) {
-        font-size: 2vw;
-    }
-    @media screen and (max-width: $break-xsmall) and (orientation: landscape) {
-        font-size: 1vw;
-    }
-    @media screen and (min-width: $break-xsmall) and (orientation: landscape) {
-        font-size: 2vw;
-    }
-}
-
-#contact {
-    border: 2px solid;
-    margin-bottom: 5px;
-    @media screen and (max-width: $break-small) {
-        font-size: 15px;
-        text-align: center;
-    }
-    @media screen and (min-width: $break-medium) {
-        font-size: 25px;
-    }
-}
-
-#education-title {
-    @media screen and (max-width: $break-small) {
-        font-size: 30px;
-    }
-    @media screen and (min-width: $break-medium) {
-        font-size: 30px;
-    }
-}
-
-#education-description {
-    @media screen and (max-width: $break-xsmall) and (orientation: portrait) {
-        font-size: 4vw;
-    }
-    @media screen and (min-width: $break-xsmall) and (orientation: portrait) {
-        font-size: 2vw;
-    }
-    @media screen and (max-width: $break-xsmall) and (orientation: landscape) {
-        font-size: 1vw;
-    }
-    @media screen and (min-width: $break-xsmall) and (orientation: landscape) {
-        font-size: 2vw;
-    }
-}
-
-#course-title {
-    @media screen and (max-width: $break-small) {
-        font-size: 30px;
-    }
-    @media screen and (min-width: $break-medium) {
-        font-size: 30px;
-    }
-}
-
-#course-description {
-    @media screen and (max-width: $break-xsmall) and (orientation: portrait) {
-        font-size: 4vw;
-    }
-    @media screen and (min-width: $break-xsmall) and (orientation: portrait) {
-        font-size: 2vw;
-    }
-    @media screen and (max-width: $break-xsmall) and (orientation: landscape) {
-        font-size: 1vw;
-    }
-    @media screen and (min-width: $break-xsmall) and (orientation: landscape) {
-        font-size: 2vw;
-    }
-}
-
-// #bottom-half {
-// width: 100%;
-// padding-left: 0;
-// padding-right: 0;
-// margin-left: 0;
-// margin-right: 0;
-// }
-// #hardpart {
-//     font-size: 3vw;
-// }
