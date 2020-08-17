@@ -1,1 +1,1 @@
-docker exec -it personal-website-running bash
+docker exec -it personal-website bash

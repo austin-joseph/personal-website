@@ -1,2 +1,2 @@
-docker stop personal-website-running
-docker rm personal-website-running
+docker stop personal-website
+docker rm personal-website
