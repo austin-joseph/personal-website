@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Home.scss';
 // import NavigationBar from './../navbar/NavigationBar.jsx';
-// import resumeJson from './../../resume.json';
+import websiteData from './../../website-data.json';
 
 export default class Home extends Component {
 	render() {
@@ -30,15 +30,26 @@ export default class Home extends Component {
 					</div>
 				</div>
 
-				{/* Center title
-				Make title bigger
-				Center buttons and make them smaller
-				Make description smaller */}
-
 				<div id="projects">
 					<div id="title">What I Have Worked On</div>
-
-					<div className="section-title">Projects Ive Lead</div>
+					<div className="project-section">
+						{
+							websiteData.projects.map((project, index) => {
+								return (
+									<div className={"element " + (index % 2 == 0 ? "left" : "right")} >
+										<div className="title underline">{project.title}</div>
+										{
+											project.description.map((descLine, index) => {
+												return <div className="subtitle">{descLine}</div>
+											})
+										}
+										<div className="body"><a href={project.details}>Project Website</a><a target="_blank" href={project.github}>Github</a> </div>
+									</div>
+								);
+							})
+						}
+					</div>
+					{/* <div className="section-title">Projects Ive Contributed To</div>
 					<div className="project-section">
 						<div className="element left">
 							<div className="title underline">Raising The Bar</div>
@@ -50,21 +61,7 @@ export default class Home extends Component {
 							<div className="subtitle">A web based bartender training and testing application</div>
 							<div className="body"><a href="">Project Website</a><a href="">Github</a> </div>
 						</div>
-					</div>
-
-					<div className="section-title">Projects Ive Contributed To</div>
-					<div className="project-section">
-						<div className="element left">
-							<div className="title underline">Raising The Bar</div>
-							<div className="subtitle">A web based bartender training and testing application</div>
-							<div className="body"><a href="">Project Website</a><a href="">Github</a> </div>
-						</div>
-						<div className="element right">
-							<div className="title underline">Raising The Bar</div>
-							<div className="subtitle">A web based bartender training and testing application</div>
-							<div className="body"><a href="">Project Website</a><a href="">Github</a> </div>
-						</div>
-					</div>
+					</div> */}
 				</div>
 				<div id="about">
 					<div id="title">My Credientials</div>
@@ -93,24 +90,20 @@ export default class Home extends Component {
 						</div>
 					</div>
 					<div className="highlights" id="highlights-2">
-						<div>
-							<div className={"highlight-title"}>Skills</div>
-							<div className={"highlight-description"}>Programming in: Java, Python, Javascript, HTML5, CSS/SCSS, Spring Boot/MVC, Flask</div>
-							<div className={"highlight-description"}>Website Design: React Js, Bootstrap, REST Api Integration, jQuery</div>
-							<div className={"highlight-description"}>Team Integration: Github, Bitbucket and Trello</div>
-						</div>
-						<div>
-							<div className={"highlight-title"}>Title Card 4</div>
-							<div className={"highlight-description"}>Websites don't have to be static, I love making pages come to life. </div>
-						</div>
-						<div>
-							<div className={"highlight-title"}>Title Card 4</div>
-							<div className={"highlight-description"}>Websites don't have to be static, I love making pages come to life. </div>
-						</div>
-						<div>
-							<div className={"highlight-title"}>Title Card 4</div>
-							<div className={"highlight-description"}>Websites don't have to be static, I love making pages come to life. </div>
-						</div>
+						{
+							websiteData.highlights.map((highlight, index) => {
+								return (
+									<div>
+										<div className="highlight-title">{highlight.title}</div>
+										{
+											highlight.description.map((descLine, index) => {
+												return <div className="highlight-description">{descLine}</div>
+											})
+										}
+									</div>
+								);
+							})
+						}
 					</div>
 				</div>
 			</React.Fragment >

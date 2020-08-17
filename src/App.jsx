@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/home/Home';
 import NavigationBar from './pages/navbar/NavigationBar';
-import resumeJson from './resume.json';
 import ProjectDetails from './pages/projectDetails/ProjectDetails';
 
 function App() {

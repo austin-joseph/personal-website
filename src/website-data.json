@@ -1,0 +1,52 @@
+{
+    "projects": [{
+        "title": "Raising The Bar",
+        "description": ["Fall 2019 - Present",
+            "Web application that enables bar owners to test their prospective employees as well as for staff to expand their skills set, the focus is on reliably evaluating the individual's ability to make cocktails."
+        ],
+        "github": "https://github.com/austin-joseph/RaisingTheBar",
+        "details": "/projects/raising-the-bar",
+        "deployment": "/raising-the-bar/deployed"
+    }, {
+        "title": "Stratego Online",
+        "description": ["Fall 2019 - Present",
+            "A web application that recreates the tabletop game Stratego. Players challenge various levels of Artificial Intelligence and the application tracks their game history, win/loss ratio, and allows for playback of past games."
+        ],
+        "github": "https://github.com/austin-joseph/stratigoonline",
+        "details": "/projects/stratego-online",
+        "deployment": "/stratigoonline/deployed"
+    }, {
+        "title": "Distributed Typo-Squatting Detector",
+        "description": ["Fall 2019 - Present",
+            "Web application which takes user url as input and results a list of potentially fraudulent websites with similarly spelled URLs."
+        ],
+        "github": "https://github.com/austin-joseph/Distributed-Typosquatting-Detector",
+        "details": "/projects/dtd",
+        "deployment": "/raising-the-bar/deployed"
+    }, {
+        "title": "Reddit Query",
+        "description": ["Summer 2019 - Present",
+            "A website scraper designed to examine the most popular posts on the online forum reddit.com and determine and commonalities in how time posted, related topics or date posted affect speed at which it reaches the top of the forum."
+        ],
+        "github": "https://github.com/austin-joseph/RedditQuery",
+        "details": "/projects/reddit-query",
+        "deployment": "/raising-the-bar/deployed"
+    }],
+    "highlights": [{
+            "title": "Programming Languages",
+            "description": ["Programming in: Java, Python, Javascript, HTML5, CSS/SCSS, Spring Boot/MVC, Flask"]
+        },
+        {
+            "title": "Web Frameworks",
+            "description": ["Website Design: React Js, Bootstrap, REST Api Integration, jQuery"]
+        },
+        {
+            "title": "Cloud Deployment",
+            "description": ["Websites don't have to be static, I love making pages come to life."]
+        },
+        {
+            "title": "Team Integration",
+            "description": ["Team Integration: Github, Bitbucket and Trello"]
+        }
+    ]
+}
