@@ -8,8 +8,7 @@ export default class ProjectDetails extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<NavigationBar />
-				Project details page
+				{this.props.match.params.projectname}
 			</React.Fragment>
 		);
 	}

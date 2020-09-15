@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/home/Home';
-import NavigationBar from './pages/navbar/NavigationBar';
 import ProjectDetails from './pages/projectDetails/ProjectDetails';
 
 function App() {
@@ -9,12 +8,9 @@ function App() {
         <React.Fragment>
             <Router>
                 <Switch>
-                    <Route path="/*" render={(props) => <Home {...props} />} />
+                    <Route exact path="/" render={(props) => <Home {...props} />} />
                     {/* <Route path="/*" render={(props) => <NavigationBar {...props} />} /> */}
-                    {/* <Route exact path="/" render={(props) => <Home {...props} />} />
-                    {resumeJson["projects"].map((item) => {
-                        return (<Route exact path={item["details"]} render={(props) => <ProjectDetails {...props} />} />)
-                    })} */}
+                    <Route exact path="/projects/:projectname" render={(props) => <ProjectDetails {...props} />} />
                 </Switch>
             </Router>
         </React.Fragment>

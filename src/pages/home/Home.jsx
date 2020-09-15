@@ -12,8 +12,8 @@ export default class Home extends Component {
 					<div id="info">
 						<div className="title">Choose a developer who can tackle your projects</div>
 						<div className="subtitle"><span className="bold">Experienced</span> in a variety of full stack technologies</div>
-						<div className="subtitle"><span className="bold">Leader</span> proven effective across multiple sucessful projects </div>
-						<div className="subtitle"><span className="bold">Effective</span> I have the skills ot meet your needs and your deadlines </div>
+						<div className="subtitle">A proven<span className="bold">Leader</span> who can take your project to success </div>
+						<div className="subtitle"><span className="bold">Effective</span> I have the skills to meet your needs and your deadlines </div>
 						<div className="subtitle"><span className="custom-name-color">Austin Joseph </span><span className="custom-title-color">Full-Stack Web Developer</span></div>
 
 						<div id="button-holder">
@@ -36,32 +36,22 @@ export default class Home extends Component {
 						{
 							websiteData.projects.map((project, index) => {
 								return (
-									<div className={"element " + (index % 2 == 0 ? "left" : "right")} >
+									<div className={"element " + (index % 2 === 0 ? "left" : "right")} >
 										<div className="title underline">{project.title}</div>
 										{
 											project.description.map((descLine, index) => {
 												return <div className="subtitle">{descLine}</div>
 											})
 										}
-										<div className="body"><a href={project.details}>Project Website</a><a target="_blank" href={project.github}>Github</a> </div>
+										<div className="body">
+											<a href={project.details}>Details</a>
+											<a target="_blank" href={project.github}>Github</a> </div>
+										{/* <a href={project.deployment}>Try It Out/a> */}
 									</div>
 								);
 							})
 						}
 					</div>
-					{/* <div className="section-title">Projects Ive Contributed To</div>
-					<div className="project-section">
-						<div className="element left">
-							<div className="title underline">Raising The Bar</div>
-							<div className="subtitle">A web based bartender training and testing application</div>
-							<div className="body"><a href="">Project Website</a><a href="">Github</a> </div>
-						</div>
-						<div className="element right">
-							<div className="title underline">Raising The Bar</div>
-							<div className="subtitle">A web based bartender training and testing application</div>
-							<div className="body"><a href="">Project Website</a><a href="">Github</a> </div>
-						</div>
-					</div> */}
 				</div>
 				<div id="about">
 					<div id="title">My Credientials</div>
