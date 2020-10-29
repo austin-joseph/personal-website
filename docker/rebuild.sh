@@ -1,2 +1,2 @@
 ./delete.sh
-./create.sh
+./build.sh
