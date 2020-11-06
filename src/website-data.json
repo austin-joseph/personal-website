@@ -2,35 +2,35 @@
     "projects": [{
         "title": "Raising The Bar",
         "description": ["Fall 2019 - Present",
-            "Web application that enables bar owners to test their prospective employees as well as for staff to expand their skills set, the focus is on reliably evaluating the individual's ability to make cocktails."
+            "Web application that enables bar owners to test their prospective employees as well as for staff to expand their skill set. The focus is on reliably evaluating the individual's ability to make cocktails."
         ],
         "github": "https://github.com/austin-joseph/RaisingTheBar",
-        "details": "/projects/raising-the-bar",
-        "deployment": "/raising-the-bar/deployed"
+        "details": "",
+        "deployment": "/raisingthebar/"
     }, {
         "title": "Stratego Online",
         "description": ["Fall 2019 - Present",
             "A web application that recreates the tabletop game Stratego. Players challenge various levels of Artificial Intelligence and the application tracks their game history, win/loss ratio, and allows for playback of past games."
         ],
         "github": "https://github.com/austin-joseph/stratigoonline",
-        "details": "/projects/stratego-online",
-        "deployment": "/stratigoonline/deployed"
+        "details": "",
+        "deployment": ""
     }, {
         "title": "Distributed Typo-Squatting Detector",
         "description": ["Fall 2019 - Present",
-            "Web application which takes user url as input and results a list of potentially fraudulent websites with similarly spelled URLs."
+            "Web application in which the user submits a URL as input and recieves a list of potentially fraudulent websites with similarly spelled URLs."
         ],
         "github": "https://github.com/austin-joseph/Distributed-Typosquatting-Detector",
-        "details": "/projects/dtd",
-        "deployment": "/raising-the-bar/deployed"
+        "details": "",
+        "deployment": "/dtd"
     }, {
         "title": "Reddit Query",
         "description": ["Summer 2019 - Present",
-            "A website scraper designed to examine the most popular posts on the online forum reddit.com and determine and commonalities in how time posted, related topics or date posted affect speed at which it reaches the top of the forum."
+            "Reddit Query is a website scraper and data analytics tool, designed to use statistical analysis to determine the best time, date and subforum on which you should submit your post to generate the most attention."
         ],
         "github": "https://github.com/austin-joseph/RedditQuery",
-        "details": "/projects/reddit-query",
-        "deployment": "/raising-the-bar/deployed"
+        "details": "",
+        "deployment": ""
     }],
     "highlights": [{
             "title": "Programming Languages",
@@ -46,7 +46,7 @@
         },
         {
             "title": "Team Integration",
-            "description": ["Team Integration: Github, Bitbucket and Trello"]
+            "description": ["Github, Bitbucket and Trello"]
         }
     ]
 }
