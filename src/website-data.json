@@ -12,7 +12,7 @@
         "description": ["Fall 2019 - Present",
             "A web application that recreates the tabletop game Stratego. Players challenge various levels of Artificial Intelligence and the application tracks their game history, win/loss ratio, and allows for playback of past games."
         ],
-        "github": "https://github.com/austin-joseph/stratigoonline",
+        "github": "https://github.com/austin-joseph/MilitaryBoardGame",
         "details": "",
         "deployment": ""
     }, {

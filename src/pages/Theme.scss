@@ -4,16 +4,17 @@ without having to naviage a dozen different files.
 I have put in some palceholder colors right now but
 we can change the colors to suit our needs easily */
 
-$primary-background-color: #1e0125;
+$primary-background-color: #181A1B;
 $primary-text-color:white;
 $secondary-background-color:#5E0738;
 $secondary-text-color: white;
 $tertiary-background-color: #2D105C;
 $tertiary-text-color: white;
-$break-xsmall: 576px;
-$break-small: 768px;
-$break-medium: 992px;
-$break-large: 1200px;
+$break-xsmall: 320px;
+$break-small: 480px;
+$break-medium: 768px;
+$break-large: 992px;
+$break-xlarge: 1200px;
 .theme-primary-color {
     background-color: $primary-background-color;
 }
@@ -73,3 +74,49 @@ $break-large: 1200px;
         text-align: right;
     }
 }
+
+body {
+    // background-color: $primary-background-color;
+    // color: $primary-text-color;
+    // width: 100;
+    .sizeTest {
+        @media only screen and (max-width: $break-xsmall) {
+            background: purple;
+        }
+        @media only screen and (min-width: $break-xsmall) {
+            background: red;
+        }
+        @media only screen and (min-width: $break-small) {
+            background: blue;
+        }
+        @media only screen and (min-width: $break-medium) {
+            background: green;
+        }
+        @media only screen and (min-width: $break-large) {
+            background: orange;
+        }
+        @media only screen and (min-width: $break-xlarge) {
+            background: black;
+        }
+        color:white;
+    }
+}
+
+// @media only screen and (max-width: $break-xsmall) {
+//     // background: purple;
+// }
+// @media only screen and (min-width: $break-xsmall) {
+//     // background: red;
+// }
+// @media only screen and (min-width: $break-small) {
+//     // background: blue;
+// }
+// @media only screen and (min-width: $break-medium) {
+//     // background: green;
+// }
+// @media only screen and (min-width: $break-large) {
+//     // background: orange;
+// }
+// @media only screen and (min-width: $break-xlarge) {
+//     // background: black;
+// }

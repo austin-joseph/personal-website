@@ -2,101 +2,105 @@ import React, { Component } from 'react';
 import './Home.scss';
 // import NavigationBar from './../navbar/NavigationBar.jsx';
 import websiteData from './../../website-data.json';
+import ctaImage from './../images/cta-background-1.png';
+import profilePhoto from './../images/profile512.png';
 
 export default class Home extends Component {
+	constructor() {
+		super();
+		this.state = {
+			projectSelected: null
+		}
+		this.changeSelectedProject = this.changeSelectedProject.bind(this);
+	}
+
+	changeSelectedProject(index) {
+		console.log(index)
+		if (this.state.projectSelected === index) {
+			this.setState({ projectSelected: null });
+		} else {
+			this.setState({ projectSelected: index });
+		}
+	}
 	render() {
+		let classThis = this;
 		return (
 			<React.Fragment>
 				{/* <NavigationBar /> */}
-				<div id="introduction">
-					<div id="info">
-						<div className="title">Choose a developer who can tackle your projects</div>
-						<div className="subtitle"><span className="bold">Experienced</span> in a variety of full stack technologies</div>
-						<div className="subtitle">A proven <span className="bold">Leader</span> who can take your project to success </div>
-						<div className="subtitle"><span className="bold">Effective,</span> I have the skills to meet your needs and your deadlines </div>
-						<div className="subtitle"><span className="custom-name-color">Austin Joseph </span><span className="custom-title-color">Full-Stack Web Developer</span></div>
+				<div id="home">
+					<div id="introduction" style={{ backgroundImage: `url( ${ctaImage})` }}>
+						<div id="centerText">
+							<div className="text">My name is<br /><span>Austin Joseph</span></div>
+							<div className="text">I am a <span>Full Stack Developer</span></div>
+						</div>
+					</div>
+					<div id="about">
+						{/* <div id="title">About Me</div> */}
+						<div id="about-body">
+							{/* <div id="about-body" className="sizeTest"> */}
+							<div id="left">
+								<img src={profilePhoto} />
+								{/* <div id="buttons">
+									<div className="button">Github</div>
+									<div className="button">LinkedIn</div>
+									<div className="button">Resume</div>
+								</div> */}
 
-						<div id="button-holder">
-							<div className="button">
-								<a href="#projects">View My Work</a>
+								<div className="desc">
+									I am a tech savvy, hardworking individual focused on creating real life solutions and achieving programming excellence through dedication and teamwork
+								</div>
 							</div>
-							<div className="button">
-								<a href="#about">See My Credentials</a>
+							<div id="right">
+								{
+									websiteData.highlights.map((highlight) => {
+										return (
+											<div>
+												<div className="title">{highlight.title}</div>
+												{
+													highlight.description.map((descLine, index) => {
+														return <div className="desc">{descLine}</div>
+													})
+												}
+											</div>
+										);
+									})
+								}
+								{/* <div>
+									<div className="title">Education</div>
+									<div className="desc">Bachelor of Science in Computer Science</div>
+									<div className="desc">Stony Brook University, Stony Brook, New York</div>
+								</div> */}
 							</div>
-							{/* <div className="button">
-								<a href="#education">My Credientials</a>
-							</div> */}
+						</div>
+					</div>
+
+					<div id="projects">
+						<div id="project-list">
+							{
+								websiteData.projects.map((project, index) => {
+									return (
+										<div className={"element"} >
+											<div className="title underline" onClick={classThis.changeSelectedProject.bind(classThis, index)}>{project.title}</div>
+											<div className={"element-body " + (classThis.state.projectSelected === index ? "shown" : "hidden")}>
+												{
+													project.description.map((descLine) => {
+														return <div className="subtitle">{descLine}</div>
+													})
+												}
+												<div className="buttons">
+													{project.details != null && project.details != "" ? (<div className="button"><a href={project.details}>Details</a></div>) : (<div />)}
+													{project.details != null && project.github != "" ? (<div className="button"><a href={project.github}>Github</a></div>) : (<div />)}
+													{project.details != null && project.deployment != "" ? (<div className="button"><a href={project.deployment}>Try It Out</a></div>) : (<div />)}
+												</div>
+											</div>
+										</div>
+									);
+								})
+							}
 						</div>
 					</div>
 				</div>
 
-				<div id="projects">
-					<div id="title">What I Have Worked On</div>
-					<div className="project-section">
-						{
-							websiteData.projects.map((project, index) => {
-								return (
-									// <div className={"element " + (index % 2 === 0 ? "left" : "right")} >
-									<div className={"element left"} >
-										<div className="title underline">{project.title}</div>
-										{
-											project.description.map((descLine, index) => {
-												return <div className="subtitle">{descLine}</div>
-											})
-										}
-										<div className="body">
-											{project.details != null && project.details != "" ? (<a href={project.details}>Details</a>) : (<div/>)}
-											<a target="_blank" href={project.github}>Github</a> </div>
-										{/* <a href={project.deployment}>Try It Out/a> */}
-									</div>
-								);
-							})
-						}
-					</div>
-				</div>
-				<div id="about">
-					<div id="title">My Credentials</div>
-					<div id="about-body">
-						<div id="left-side">
-							<div id="profile-image"><img src="profile256.png" alt="profile" /></div>
-							<div id="bottom-text">austinobejo@gmail.com</div>
-						</div>
-
-						<div id="description">
-							I am a tech savvy, hardworking individual focused on creating real life solutions and achieving programming excellence through dedication and teamwork
-						</div>
-					</div>
-					<div className="highlights" id="highlights-1">
-						<div>
-							{/* <div className={"highlight-img"}>Fast</div> */}
-							<div className={"highlight-title"}>Education</div>
-							<div className={"highlight-description"}>Bachelor of Science in Computer Science </div>
-							<div className={"highlight-description"}>From Stony Brook University</div>
-							<div className={"highlight-description"}>Graduated May 2020</div>
-							<div className={"highlight-description"}>Machine Learning | Computer Security | Software Development | Computer Networks | Principles of Database Systems | Data Structures | Analysis of Algorithms </div>
-						</div>
-						<div>
-							<div className={"highlight-title"}>Leadership</div>
-							<div className={"highlight-description"}>5 years of experience leading 2- 4 person development teams</div>
-						</div>
-					</div>
-					<div className="highlights" id="highlights-2">
-						{
-							websiteData.highlights.map((highlight, index) => {
-								return (
-									<div>
-										<div className="highlight-title">{highlight.title}</div>
-										{
-											highlight.description.map((descLine, index) => {
-												return <div className="highlight-description">{descLine}</div>
-											})
-										}
-									</div>
-								);
-							})
-						}
-					</div>
-				</div>
 			</React.Fragment >
 		);
 	}
