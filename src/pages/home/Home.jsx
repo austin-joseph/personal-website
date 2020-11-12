@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Home.scss';
 // import NavigationBar from './../navbar/NavigationBar.jsx';
 import websiteData from './../../website-data.json';
-import ctaImage from './../images/cta-background-1.png';
+import ctaImage from './../images/cta-background.png';
 import profilePhoto from './../images/profile512.png';
 
 export default class Home extends Component {
