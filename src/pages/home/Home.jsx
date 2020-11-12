@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './Home.scss';
 // import NavigationBar from './../navbar/NavigationBar.jsx';
 import websiteData from './../../website-data.json';
-import ctaImage from './../images/cta-background.png';
-import profilePhoto from './../images/profile512.png';
+import ctaImage from './../images/cta-background.jpg';
+import profilePhoto from './../images/profile.jpg';
 
 export default class Home extends Component {
 	constructor() {
@@ -39,7 +39,7 @@ export default class Home extends Component {
 						<div id="about-body">
 							{/* <div id="about-body" className="sizeTest"> */}
 							<div id="left">
-								<img src={profilePhoto} />
+								<img src={profilePhoto} alt="profile"/>
 								{/* <div id="buttons">
 									<div className="button">Github</div>
 									<div className="button">LinkedIn</div>
@@ -52,13 +52,13 @@ export default class Home extends Component {
 							</div>
 							<div id="right">
 								{
-									websiteData.highlights.map((highlight) => {
+									websiteData.highlights.map((highlight, index) => {
 										return (
-											<div>
+											<div key = {highlight.title + index}>
 												<div className="title">{highlight.title}</div>
 												{
 													highlight.description.map((descLine, index) => {
-														return <div className="desc">{descLine}</div>
+														return <div className="desc" key={descLine+index}>{descLine}</div>
 													})
 												}
 											</div>
@@ -83,14 +83,14 @@ export default class Home extends Component {
 											<div className="title underline" onClick={classThis.changeSelectedProject.bind(classThis, index)}>{project.title}</div>
 											<div className={"element-body " + (classThis.state.projectSelected === index ? "shown" : "hidden")}>
 												{
-													project.description.map((descLine) => {
-														return <div className="subtitle">{descLine}</div>
+													project.description.map((descLine, index) => {
+														return <div className="subtitle" key={descLine+index}>{descLine}</div>
 													})
 												}
 												<div className="buttons">
-													{project.details != null && project.details != "" ? (<div className="button"><a href={project.details}>Details</a></div>) : (<div />)}
-													{project.details != null && project.github != "" ? (<div className="button"><a href={project.github}>Github</a></div>) : (<div />)}
-													{project.details != null && project.deployment != "" ? (<div className="button"><a href={project.deployment}>Try It Out</a></div>) : (<div />)}
+													{project.details !== null && project.details !== "" ? (<div className="button"><a href={project.details}>Details</a></div>) : (<div />)}
+													{project.details !== null && project.github !== "" ? (<div className="button"><a href={project.github}>Github</a></div>) : (<div />)}
+													{project.details !== null && project.deployment !== "" ? (<div className="button"><a href={project.deployment}>Try It Out</a></div>) : (<div />)}
 												</div>
 											</div>
 										</div>
