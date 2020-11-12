@@ -6,7 +6,7 @@
         ],
         "github": "https://github.com/austin-joseph/RaisingTheBar",
         "details": "",
-        "deployment": "/raisingthebar/"
+        "deployment": ""
     }, {
         "title": "Stratego Online",
         "description": ["Fall 2019 - Present",
@@ -22,7 +22,7 @@
         ],
         "github": "https://github.com/austin-joseph/Distributed-Typosquatting-Detector",
         "details": "",
-        "deployment": "/dtd"
+        "deployment": ""
     }, {
         "title": "Reddit Query",
         "description": ["Summer 2019 - Present",
